@@ -4,8 +4,8 @@ The fabric explorer dockerizes the hyperledger fabric blockchain explorer mainta
 
 You need to mount two volumes to the explorer container.
 
-1. **A config.json**: see example config.json in v1.0 and v1.1 sub directories.
-1. **The crypto materials**: the generated crypto materials.
+1. **A config.json**: Describes the network configuration. see example config.json in v1.0 and v1.1 sub directories.
+1. **The crypto materials**: Generated from the bootstrap of your fabric network.
 
 ## v1.0
 
