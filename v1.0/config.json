@@ -1,0 +1,40 @@
+{
+    "network-config": {
+        "org1": {
+            "name": "org",
+            "mspid": "ORGMSP",
+            "peer1": {
+                "requests": "grpcs://peer0.example.com:7051",
+                "events": "grpcs://peer0.example.com:7053",
+                "server-hostname": "peer0.example.com",
+                "tls_cacerts": "/artifacts/crypto-config/peerOrganizations/example.com/peers/peer0.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+            },
+            "admin": {
+                "key": "/artifacts/crypto-config/peerOrganizations/example.com/users/Admin@example.com/msp/keystore",
+                "cert": "/artifacts/crypto-config/peerOrganizations/example.com/users/Admin@example.com/msp/signcerts"
+            }
+        }
+    },
+    "orderer": [{
+        "url": "grpcs://orderer.example.com:7050",
+        "server-hostname": "orderer.example.com",
+        "tls_cacerts": "/artifacts/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+    }],
+    "host": "localhost",
+    "port": "8080",
+    "channel": "default",
+    "channelPath": "../../artifacts/channel-artifacts/channel.tx",
+    "GOPATH": "/usr/src/blockchain/",
+    "keyValueStore": "/tmp/fabric-client-kvs",
+    "enableTls": true,
+    "users": [{
+        "username": "admin",
+        "secret": "adminpw"
+    }],
+    "mysql": {
+        "host": "mysql",
+        "database": "fabricexplorer",
+        "username": "root",
+        "passwd": "123456"
+    }
+}
