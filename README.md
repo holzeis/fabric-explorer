@@ -7,7 +7,7 @@ You need to mount two volumes to the explorer container.
 1. **A config.json**: Describes the network configuration. see example config.json in v1.0 and v1.1 sub directories.
 1. **The crypto materials**: Generated from the bootstrap of your fabric network.
 
-Version 3.5 is based on commit releas-3.5. Add the following services to your docker-compose file.
+Version 3.5 is based on commit release-3.5. Add the following services to your docker-compose file.
 
 ```yaml
   postgres:
