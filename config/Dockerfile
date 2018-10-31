@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:8.11.1
 
 RUN apt-get install -y git
 
@@ -6,10 +6,12 @@ RUN git clone https://github.com/hyperledger/blockchain-explorer.git /opt/blockc
 
 WORKDIR /opt/blockchain-explorer/
 
-RUN git checkout 2f642c084ff156cf0ac1e8c3ff1281e57869e353
+RUN git checkout release-3.5
 
 RUN wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh && \
     chmod 775 wait-for-it.sh && \
-    npm install
+    npm install --verbose
+
+RUN cd client && npm install && npm run build
 
 EXPOSE 8080

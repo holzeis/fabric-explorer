@@ -15,8 +15,8 @@
             }
         }
     },
-    "orderer": [{
-        "url": "grpcs://orderer.example.com:7050",
+    "orderers": [{
+        "requests": "grpcs://orderer.example.com:7050",
         "server-hostname": "orderer.example.com",
         "tls_cacerts": "/artifacts/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
     }],
